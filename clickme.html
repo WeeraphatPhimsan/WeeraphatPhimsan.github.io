@@ -1,0 +1,40 @@
+
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+	<title>Click me</title>
+	<meta charset="utf-8">
+	
+</head>
+<body>
+	<button >Click me</button>
+	<p id="txt"></p>
+</body>
+</html>
+<script type="text/javascript">
+	
+
+function createParagraph(){
+	  
+
+	if(i == 1){
+	document.getElementById('txt').innerHTML = "You clicked the button for " + i + " time";
+
+	i++;
+	}
+	else if ( i >= 1){
+	document.getElementById('txt').innerHTML = "You clicked the button for " + i + " times";
+	i++;
+	}
+	
+}
+
+var buttons = document.querySelectorAll('button');
+
+
+for(var i = 0; i < buttons.length ; i++)
+{
+	buttons[i].addEventListener('click',createParagraph);
+}
+
+</script>
